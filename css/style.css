@@ -103,7 +103,7 @@ main {
   flex: 1;
   margin-top: 25px;
 }
-.contudo-geral {
+.conteudo-geral {
   gap: 50px;
 }
 /*---------------------------------------------------*/
@@ -127,7 +127,6 @@ main {
 .container-texto {
   width: 50%;
   color: var(--text-title);
-  justify-content: center;
   gap: 25px;
 }
 .container-texto div.titulo {
