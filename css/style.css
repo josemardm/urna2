@@ -239,6 +239,30 @@ footer {
   font-size: 10;
   color: var(--text);
 }
+
+/*---------------------------------------------------*/
+/*  Pagina final
+/*---------------------------------------------------*/
+.pagina-final {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  gap: 20px;
+}
+.pagina-final img{
+  width: 300px;
+}
+.pagina-final p{
+  color: var(--text-title-secundary);
+  max-width: 500px;
+  text-align: center;
+}
+.pagina-final h1{
+  color: var(--text-title-secundary);
+}
+
 /*---------------------------------------------------*/
 /*  responsividade
 /*---------------------------------------------------*/
