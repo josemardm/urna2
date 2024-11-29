@@ -1,12 +1,18 @@
 :root {
-  --background-color: #0072b0;
+  /* --background-color: #0072b0; */
+  --background-color: linear-gradient(
+    90deg,
+    rgb(0, 46, 93) 0%,
+    rgb(9, 87, 121) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
   --text: #ffffff;
   --text-btn: #ffffff;
   --text-title: #ffffff;
   --text-title-secundary: #ffffff;
   --button-color: #e07b3f;
   --link-color: #f69300;
-  --span-color: #e07b3f;
+  --span-color: #fa955b;
   --paragraph-color: #ffffff;
   --card-color: #ffffff;
   --border-color: #9c9c9c;
@@ -14,8 +20,10 @@
   --text-card: #a2a2a2;
   --borde-with: 5px;
 }
+
+
 /*---------------------------------------------------*/
-/*    GERAl
+/*    GERAL
 /*---------------------------------------------------*/
 * {
   margin: 0;
@@ -30,17 +38,21 @@ body {
   height: 100vh;
   font-family: "Open Sans", sans-serif;
 }
+
 .flex {
   display: flex;
 }
+
 .flex-column {
   display: flex;
   flex-direction: column;
 }
+
 .interface {
   max-width: 1080px;
   margin: 0 auto;
 }
+
 .btn {
   width: 50%;
   padding: 8px 0;
@@ -52,21 +64,23 @@ body {
   cursor: pointer;
   color: var(--text-btn);
   transition: 0.3s ease;
+}
 
-  &:hover {
-    background: var(--link-color);
-    color: var(--text);
-    transform: scale(1.1);
-  }
+.btn:hover {
+  background: var(--link-color);
+  color: var(--text);
+  transform: scale(1.1);
 }
 
 span {
   color: var(--span-color);
 }
+
 a {
   text-decoration: none;
   color: var(--text);
 }
+
 hr {
   border: none; /* Remove a borda padrão */
   height: 2px; /* Define a altura da linha */
@@ -75,41 +89,49 @@ hr {
 }
 
 /*---------------------------------------------------*/
-/*    header
+/*    HEADER
 /*---------------------------------------------------*/
 header {
   padding: 20px 4%;
 }
+
 header .interface {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 header h1 {
   color: var(--text-title);
   font-size: 30px;
 }
+
 header nav {
   width: 100%;
   text-align: center;
 }
+
 header .logo img {
   width: 50px;
 }
+
 /*---------------------------------------------------*/
-/*  main  
+/*  MAIN  
 /*---------------------------------------------------*/
 main {
   flex: 1;
   margin-top: 25px;
 }
-.conteudo-geral {
-  gap: 50px;
-}
-/*---------------------------------------------------*/
-/*  formulario  
-/*---------------------------------------------------*/
 
+.conteudo-geral {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/*---------------------------------------------------*/
+/*  FORMULARIO  
+/*---------------------------------------------------*/
 .formulario {
   width: 70%;
   margin-top: 20px;
@@ -121,49 +143,57 @@ main {
   border-radius: 10px;
   border: none;
 }
+
 /*---------------------------------------------------*/
-/*  container-texto  
+/*  CONTAINER-TEXTO  
 /*---------------------------------------------------*/
 .container-texto {
   width: 50%;
   color: var(--text-title);
   gap: 25px;
 }
-.container-texto div.titulo {
+
+.container-texto .titulo {
   font-size: 15px;
   line-height: 35px;
 }
-.container-texto div.subtitulo {
+
+.container-texto .subtitulo {
   font-size: 16px;
   text-align: justify;
   color: var(--paragraph-color);
 }
-.container-texto div.orientacoes {
+
+.container-texto .orientacoes {
   font-size: 25px;
   color: var(--text-title-secundary);
   font-weight: 600;
 }
+
 /*---------------------------------------------------*/
-/*  container-img
+/*  CONTAINER-IMG
 /*---------------------------------------------------*/
 .container-img {
   width: 50%;
 }
+
 .container-img img {
   width: 100%;
-  margin: 50px 0px 0px 50px;
+  margin: 50px 0 0 50px;
 }
+
 /*---------------------------------------------------*/
-/*  Section
+/*  SECTION
 /*---------------------------------------------------*/
 section h2 {
   color: var(--text-title-secundary);
   text-align: center;
   font-size: 30px;
-  margin: 30px 0px;
+  margin: 30px 0;
 }
+
 /*---------------------------------------------------*/
-/*  Card
+/*  CARD
 /*---------------------------------------------------*/
 .card {
   display: flex;
@@ -171,23 +201,26 @@ section h2 {
   border-left: solid var(--borde-with) var(--border-color);
   width: 300px;
   height: 380px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   background-color: var(--card-color);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
+
 .card-img {
   display: flex;
   justify-content: center;
   align-items: center; /* Ativa o Flexbox */
   overflow: hidden;
 }
+
 .card-img img {
-  width: 150px; /* Largura da imagem */
-  height: 150px; /* Altura da imagem */
-  border-radius: 100%; /* Faz a imagem circular */
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
   object-fit: cover;
   margin-top: 30px;
 }
+
 .card h2 {
   font-size: 16px;
   margin: 0;
@@ -195,6 +228,7 @@ section h2 {
   color: var(--text-card-h2);
   font-weight: 700;
 }
+
 .card h5 {
   font-size: 13px;
   margin: 0;
@@ -202,20 +236,20 @@ section h2 {
   text-align: center;
   color: var(--text-card);
 }
+
 .card p {
   font-size: 15px;
   margin: 0;
-  padding: 0px;
-
-  font-size: 15px;
   padding: 10px;
 }
+
 .card .unidade {
   align-items: start;
   margin-top: 25px;
   margin-left: 20px;
   color: var(--text-card);
 }
+
 .card .btn {
   margin-top: 25px;
   margin-left: 20px;
@@ -224,7 +258,7 @@ section h2 {
 }
 
 /*---------------------------------------------------*/
-/*  candidatos
+/*  CANDIDATOS
 /*---------------------------------------------------*/
 .candidatos {
   display: flex;
@@ -233,41 +267,62 @@ section h2 {
   margin-top: 50px;
   justify-content: center;
 }
+
 footer {
   text-align: center;
   padding: 20px 0;
-  font-size: 10;
+  font-size: 10px;
   color: var(--text);
 }
 
 /*---------------------------------------------------*/
-/*  Pagina final
+/*  PAGINA FINAL
 /*---------------------------------------------------*/
 .pagina-final {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  justify-items: center;
   gap: 20px;
 }
-.pagina-final img{
+
+.pagina-final img {
   width: 300px;
 }
-.pagina-final p{
+
+.pagina-final p {
   color: var(--text-title-secundary);
   max-width: 500px;
   text-align: center;
 }
-.pagina-final h1{
+
+.pagina-final h1 {
   color: var(--text-title-secundary);
 }
 
 /*---------------------------------------------------*/
-/*  responsividade
+/*  RESPONSIVIDADE
 /*---------------------------------------------------*/
 @media (max-width: 768px) {
   .container-img {
-    visibility: hidden;
+    display: none;
+  }
+
+  .container-texto,
+  .formulario {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  body {
+    justify-content: center;
+    align-items: center;
   }
 }
